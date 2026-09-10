@@ -81,6 +81,18 @@ li { margin-bottom: 0.35rem; }
 
 .entries li { margin-bottom: 0.9rem; }
 
+.news {
+  max-height: 15rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  margin: 0;
+  padding: 0.6rem 1rem 0.6rem 2.2rem;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+}
+
+.news:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
 .muted, .note { color: var(--muted); }
 
 .note { font-size: 0.9rem; }
