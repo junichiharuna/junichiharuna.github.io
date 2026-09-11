@@ -236,7 +236,7 @@ li::marker {
   overflow-y: auto;
   overscroll-behavior: contain;
   scrollbar-width: thin;
-  scrollbar-color: var(--rule) transparent;
+  scrollbar-color: var(--muted) transparent;
   margin: 0 0 1rem;
   padding: 0.9rem 1.2rem 0.9rem 2.6rem;
   border-left: 2px solid var(--accent);
@@ -308,6 +308,7 @@ footer {
 
   header.site {
     position: static;
+    min-height: 0;
     max-height: none;
     padding: 1.6rem 1.25rem 1.2rem;
     border-right: 0;
