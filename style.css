@@ -1,12 +1,14 @@
-/* 論文誌風: セリフ体、生成りの紙、左に固定した名前とナビ、右に本文 */
+/* 論文誌風: セリフ体、Monokai由来の配色、左に固定した名前とナビ、右に本文
+   --accent はリンク、--mark は現在ページの印と What's new の罫線 */
 
 :root {
-  --bg: #f4efe4;
-  --bg-side: #ede7d8;
-  --fg: #23201a;
-  --muted: #6d665a;
-  --accent: #8a3a2a;
-  --rule: #d8cfbc;
+  --bg: #fbfaf3;
+  --bg-side: #f2f1e6;
+  --fg: #272822;
+  --muted: #75715e;
+  --accent: #0e8ba3;
+  --mark: #e0246a;
+  --rule: #dcdccf;
   --grain: 0.05;
   --serif: "Newsreader", "Shippori Mincho", Georgia, "Hiragino Mincho ProN",
     "Yu Mincho", YuMincho, "Noto Serif JP", serif;
@@ -14,12 +16,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #1b1915;
-    --bg-side: #161410;
-    --fg: #e9e1d1;
-    --muted: #9b9285;
-    --accent: #d99274;
-    --rule: #35302a;
+    --bg: #272822;
+    --bg-side: #1e1f1a;
+    --fg: #f8f8f2;
+    --muted: #a29e88;
+    --accent: #66d9ef;
+    --mark: #f92672;
+    --rule: #3e3d32;
     --grain: 0.07;
   }
 }
@@ -127,7 +130,7 @@ nav a::before {
   top: 50%;
   width: 0;
   height: 1px;
-  background: var(--accent);
+  background: var(--mark);
   transition: width 0.25s ease;
 }
 
@@ -239,7 +242,7 @@ li::marker {
   scrollbar-color: var(--muted) transparent;
   margin: 0 0 1rem;
   padding: 0.9rem 1.2rem 0.9rem 2.6rem;
-  border-left: 2px solid var(--accent);
+  border-left: 2px solid var(--mark);
   background: color-mix(in srgb, var(--fg) 4%, transparent);
 }
 
