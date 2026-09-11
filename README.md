@@ -6,15 +6,20 @@
 
 | ファイル | 内容 |
 |---|---|
-| `index.html` | Home（Interest、Keywords、What's new、Contact） |
-| `publications.html` | 論文、学位論文、講義ノート |
-| `talks.html` | 講演、セミナー、ポスター |
-| `cv.html` | 経歴 |
+| `index.html` | Home（名前の下に業績プロフィールへのリンク、Interest、Keywords、What's new、Contact） |
+| `research.html` | 研究概要（3テーマ）とセミナー主催者向けのShort bio |
+| `publications.html` | 論文、学位論文、講義ノート、ソフトウェアとデータ |
+| `talks.html` | 直近の予定（Upcoming）、講演、セミナー、ポスター。2026年の4講演はスライドPDFへリンク |
+| `cv.html` | 経歴。英語CVのPDF（`cv.pdf`）へのリンク |
 | `links.html` | 便利なリンク集 |
 | `hobby.html` | 趣味 |
 | `style.css` | 全ページ共通のスタイル（ライトとダークの両対応） |
+| `cv.pdf` | 英語CV。マスターはJHLaboの`Applications/CV/cv_en.tex`で、そこで`latexmk -pdf`したPDFをコピーする |
+| `slides/` | 講演スライドのPDF。マスターはJHLaboの`slides/<日付_名前>/`で、ビルドした`out/*.pdf`をコピーする |
+| `favicon.svg`、`og.png` | タブのアイコンと、SNSやSlackにURLを貼ったときのプレビュー画像（1200×630） |
+| `sitemap.xml`、`robots.txt` | 検索エンジン向け。ページを増やしたら`sitemap.xml`にも足す |
 
-ナビゲーションは各ページに直接書いてある。ページを増やすときは全ページのnavを揃える（`<head>`のフォント読み込みと、名前の下の`site-kana`も同じ）。
+ナビゲーションは各ページに直接書いてある。ページを増やすときは全ページのnavを揃える（`<head>`のフォント読み込み、`description`とOGPのmeta、`favicon`、名前の下の`site-kana`も同じ）。`index.html`の`<head>`にはJSON-LDのPerson情報があり、外部プロフィール（ORCID、Google Scholar、INSPIRE-HEP、arXiv、researchmap、GitHub）を`sameAs`に列挙している。名前の下の`profiles`行と同じ集合に保つ。
 
 ## デザイン
 
@@ -25,6 +30,9 @@
 - 論文と講演のマスターはJHLaboの`Applications/CV/publication_list.tex`。先にマスターを直し、このサイトはそこから写す。
 - 論文を足したら、`publications.html`に加えて`index.html`のWhat's newにも1行足す（日付は`DD/M/YYYY`）。
 - 論文にはDOIとarXivの両方をリンクする。
+- `talks.html`のUpcomingには開催前の講演だけを置く。終わったら該当の節（English talks、Japanese talks、Seminar）へ移し、スライドがあれば`slides/`にPDFを置いて`[slides]`のリンクを足す。
+- `cv.pdf`は事実が変わったらJHLabo側の`cv_en.tex`を直してビルドし直し、PDFを差し替える（「Last updated」の月も更新）。
+- What's newには論文、講義ノート、サイトの大きな変更だけを書く（「Interest updated」のような更新記録は書かない）。
 
 ## 手元での確認
 

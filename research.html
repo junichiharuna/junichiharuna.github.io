@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research | Junichi Haruna</title>
+<meta name="description" content="Research overview of Junichi Haruna: gauge and homological structures in quantum error correction, resource costs of fault tolerance, and nonperturbative quantum field theory.">
+<link rel="canonical" href="https://junichiharuna.github.io/research.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Research | Junichi Haruna">
+<meta property="og:description" content="Gauge and homological structures in quantum error correction, resource costs of fault tolerance, and nonperturbative quantum field theory.">
+<meta property="og:url" content="https://junichiharuna.github.io/research.html">
+<meta property="og:image" content="https://junichiharuna.github.io/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;family=Shippori+Mincho:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+<a class="site-name" href="./">Junichi Haruna</a>
+<p class="site-kana" lang="ja">春名純一</p>
+<nav>
+<ul>
+<li><a href="./">Home</a></li>
+<li><a href="research.html" aria-current="page">Research</a></li>
+<li><a href="publications.html">Publications</a></li>
+<li><a href="talks.html">Talks</a></li>
+<li><a href="cv.html">CV</a></li>
+<li><a href="links.html" lang="ja">便利なリンク集</a></li>
+<li><a href="hobby.html" lang="ja">趣味</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+<h1>Research</h1>
+<p>My work connects quantum error correction with gauge theory and algebraic topology.
+The guiding question is which logical gates a quantum error-correcting code admits, and why.
+The methods come from nonperturbative quantum field theory, where I started.</p>
+
+<h2>Gauge and homological structures in quantum error correction</h2>
+<p>Since Eastin and Knill (2009) it has been known that no quantum error-correcting code admits a universal transversal gate set.
+The converse question, which gates a given code does admit, had been answered code by code, by finding a construction or failing to find one.
+My recent single-author papers turn this into a classification.</p>
+<p>In <a href="https://arxiv.org/abs/2511.15224">arXiv:2511.15224</a> I introduced operator-valued cochains, an electric and a magnetic gauge field living on the chain complex of a CSS code, and constructed logical gates at every level of the Clifford hierarchy in closed form for an arbitrary CSS code.
+The logical action of these operators depends only on their cohomology class.
+This extends the known correspondence between quantum error correction and lattice gauge theory from logical Pauli operators to general logical gates.</p>
+<p>In <a href="https://arxiv.org/abs/2602.14499">arXiv:2602.14499</a> I proved that the transversal implementability of logical phase gates in a CSS code is exactly a lifting problem in obstruction theory.
+Logical Pauli operators are described with <i>Z</i><sub>2</sub> coefficients, and level <i>m</i> of the Clifford hierarchy needs <i>Z</i><sub>2<sup><i>m</i></sup></sub>.
+Implementing the &pi;/2<sup><i>m</i>&minus;1</sup> rotation transversally is the same problem as lifting a cohomology class up the coefficient tower, and the obstruction to passing from one level to the next is a Bockstein homomorphism.
+The non-existence of a transversal gate can then be certified by computing the obstruction for the code at hand.
+A small reference implementation is <a href="https://github.com/junichiharuna/bockstein-gate-check">available on GitHub</a>.</p>
+
+<h2>Resource costs of fault tolerance and code design</h2>
+<p>On the practical side, with K. Sakamoto, H. Morisaki, E. Itou, K. Fujii and K. Mitarai (<a href="https://doi.org/10.22331/q-2024-09-17-1474">Quantum <b>8</b>, 1474</a>) we quantified the number of <i>T</i> gates required to simulate the Schwinger model, a 1+1 dimensional U(1) lattice gauge theory, and showed that at practical scales error correction is the dominant cost.
+Since the <i>T</i> gate is not transversal on the surface code, this estimate connects directly to the classification above: the set of transversally implementable gates decides which operations dominate the cost of a computation.</p>
+<p>On the construction side, with K. Fujii (<a href="https://doi.org/10.1093/ptep/ptaf130">PTEP <b>2025</b>, 103A03</a>) I introduced a hierarchical scheme that combines a rotated surface code with a hypergraph product code, a class of quantum LDPC codes, and improves qubit efficiency over existing methods.
+The data and code are <a href="https://doi.org/10.5281/zenodo.15660987">on Zenodo</a>.</p>
+
+<h2>Nonperturbative quantum field theory</h2>
+<p>My earlier work is in strongly coupled quantum field theory, where progress depends on structures that make sense beyond perturbation theory.
+My doctoral thesis developed the gradient flow exact renormalization group for scalar field theories (<a href="https://doi.org/10.1093/ptep/ptac021">PTEP <b>2022</b>, 033B03</a>) and extended it to scalar quantum electrodynamics (<a href="https://doi.org/10.1007/JHEP05(2024)291">JHEP <b>05</b>, 291</a>).
+With the functional renormalization group I studied the O(3) nonlinear sigma model and its non-Abelian bosonization duality (<a href="https://doi.org/10.1103/PhysRevD.111.045012">Phys. Rev. D <b>111</b>, 045012</a>) and the T<span class="ovl">T</span>-deformed scalar theory (<a href="https://doi.org/10.1103/PhysRevD.109.065016">Phys. Rev. D <b>109</b>, 065016</a>).
+Before that I worked on the large <i>N</i> limit of the T<span class="ovl">T</span> deformation (<a href="https://doi.org/10.1007/JHEP04(2020)127">JHEP <b>04</b>, 127</a>; <a href="https://doi.org/10.1016/j.nuclphysb.2021.115499">Nucl. Phys. B <b>971</b>, 115499</a>) and on mass scale generation in a classically conformal two-scalar system (<a href="https://doi.org/10.1093/ptep/ptz165">PTEP <b>2020</b>, 033B01</a>).
+This body of work was recognised by the 18th Particle Physics Medal, Encouragement Prize (FY2023).
+The same methods carried outside physics as well, to a path-integral formulation of reservoir computing (<a href="https://doi.org/10.1103/PhysRevE.107.034306">Phys. Rev. E <b>107</b>, 034306</a>).</p>
+<p>This background bears directly on the quantum error correction results: the operator-valued gauge fields on the chain complex apply lattice gauge theory to a code.</p>
+
+<h2>Short bio</h2>
+<p class="note">For seminar and workshop hosts. Feel free to copy.</p>
+<blockquote class="bio">
+<p>Junichi Haruna is a Program-Specific Researcher at the Graduate School of Informatics, Kyoto University, in the group of Keisuke Fujii.
+He received his Ph.D. in physics from Kyoto University in 2023 with a thesis on the gradient flow exact renormalization group, and was a Specially Appointed Researcher at the Center for Quantum Information and Quantum Biology, Osaka University, from 2023 to 2026.
+His research connects quantum error correction with gauge theory and algebraic topology, in particular the classification of transversal logical gates in CSS codes by cohomological obstructions, and he also works on nonperturbative methods in quantum field theory.
+He received the 18th Particle Physics Medal, Encouragement Prize, in 2023.</p>
+</blockquote>
+</main>
+
+<footer>&copy; Junichi Haruna</footer>
+</div>
+</body>
+</html>
