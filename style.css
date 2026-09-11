@@ -97,6 +97,15 @@ header.site {
   color: var(--muted);
 }
 
+/* 名前の下の肩書きと所属 */
+.site-tagline {
+  margin: 1rem 0 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  font-style: italic;
+  color: var(--muted);
+}
+
 nav {
   margin-top: 2.2rem;
   padding-top: 1.4rem;

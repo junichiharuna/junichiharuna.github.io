@@ -19,7 +19,7 @@
 | `favicon.svg`、`og.png` | タブのアイコンと、SNSやSlackにURLを貼ったときのプレビュー画像（1200×630） |
 | `sitemap.xml`、`robots.txt` | 検索エンジン向け。ページを増やしたら`sitemap.xml`にも足す |
 
-ナビゲーションは各ページに直接書いてある。ページを増やすときは全ページのnavを揃える（`<head>`のフォント読み込み、`description`とOGPのmeta、`favicon`、名前の下の`site-kana`も同じ）。タブや検索結果に出る`<title>`は、Homeが「Junichi Haruna | Theoretical Physicist, Kyoto University」、他のページが「ページ名 | Junichi Haruna, Kyoto University」で、`og:title`も同じ文字列にする。`index.html`の`<head>`にはJSON-LDのPerson情報があり、外部プロフィール（ORCID、Google Scholar、INSPIRE-HEP、arXiv、researchmap、GitHub）を`sameAs`に列挙している。名前の下の`profiles`行と同じ集合に保つ。
+ナビゲーションは各ページに直接書いてある。ページを増やすときは全ページのnavを揃える（`<head>`のフォント読み込み、`description`とOGPのmeta、`favicon`、名前の下の`site-kana`と肩書きの`site-tagline`も同じ）。タブや検索結果に出る`<title>`は、Homeが「Junichi Haruna | Theoretical Physicist, Kyoto University」、他のページが「ページ名 | Junichi Haruna, Kyoto University」で、`og:title`も同じ文字列にする。`index.html`の`<head>`にはJSON-LDのPerson情報があり、外部プロフィール（ORCID、Google Scholar、INSPIRE-HEP、arXiv、researchmap、GitHub）を`sameAs`に列挙している。名前の下の`profiles`行と同じ集合に保つ。
 
 ## デザイン
 
