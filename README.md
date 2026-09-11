@@ -15,7 +15,7 @@
 | `hobby.html` | 趣味 |
 | `style.css` | 全ページ共通のスタイル（ライトとダークの両対応） |
 | `cv.pdf` | 英語CV。マスターはJHLaboの`Applications/CV/cv_en.tex`で、そこで`latexmk -pdf`したPDFをコピーする |
-| `slides/` | 講演スライドのPDF。マスターはJHLaboの`slides/<日付_名前>/`で、ビルドした`out/*.pdf`をコピーする |
+| `slides/` | 講演スライドのPDF（`YYYYMMDD_会場.pdf`、日付は講演日）。2026年6月以降の分はJHLaboの`slides/<日付_名前>/`でビルドした`out/*.pdf`のコピー。それ以前の分はDropboxの`University/Academic/<年>/`にある発表時のPDF（PowerPointしかないものはPowerPointでPDF書き出し）のコピー |
 | `favicon.svg`、`og.png` | タブのアイコンと、SNSやSlackにURLを貼ったときのプレビュー画像（1200×630） |
 | `sitemap.xml`、`robots.txt` | 検索エンジン向け。ページを増やしたら`sitemap.xml`にも足す |
 
